@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>shopey | Mobile HTML/CSS eCommerce Template</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="shopey, premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+ <% include header_css_js.ejs %>
+
+</head>
+<body>
+
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  <!-- page wrapper starts -->
+  <div class="pageWrapper homePageWrapper"> 
+    
+    <% include headers.ejs %>
+    
+    
+    
+    <!-- page content wrapper starts -->
+    <div class="pageContentWrapper"> 
+      
+      <!-- shop search form wrapper starts -->
+     
+      <!-- shop search form wrapper ends --> 
+      
+      <!-- slider wrapper starts -->
+      <div class="sliderOuterWrapper">
+        <div class="sliderWrapper">
+          <div class="mainSlider" id="mainSlider"> 
+         <%         
+          var sytp=result.length-1;
+         
+         for(var i = 0 ; i <= sytp ; i++){ %>
+
+          
+          <a href="<%="/cartoon/?bh="+result[i].tupianjj%>&tu=<%=result[i].tupian%>"><img src="<%=result[i].tupian%>" alt="" /></a>
+         <% } %>
+
+           </div>
+        </div>
+        <a href="" class="sliderControl previousSlideButton"></a> <a href="" class="sliderControl nextSlideButton"></a> </div>
+      <!-- slider wrapper ends -->
+      
+     
+      
+  </div>
+  <!-- page wrapper ends --> 
+
+
+
+  <!-- page wrapper starts -->
+  <div class="pageWrapper portfolioTwoPageWrapper"> 
+      
+      <!-- portfolio wrapper starts -->
+    
+     
+      <div class="headerBreak headerBreakTitleBottom"></div>
+      <!-- portfolio items wrapper starts -->
+      <div class="container"> 
+     
+        <!-- portfolio item starts  -->
+        <% 
+           var bdtp=result.length-1;
+        
+         for(var i = 0 ; i <= bdtp ; i++){ %>
+
+        <div class="col-xs-6 col-md-4"> <a href="<%="/cartoon/?bh="+result[i].tupianjj%>&tu=<%=result[i].tupian%>" class="portfolioTwoItemImageWrapper"><img src="<%=result[i].tupian%>" alt=""></a>
+          <div class="portfolioTwoItemInfoWrapper">
+            <h4 class="portfolioTwoItemTitle"><%=result[i].tupianjj%></h4>
+          </div>
+        </div>
+        <% } %>
+        
+        <!-- portfolio item ends --> 
+      
+      </div>
+      
+      
+      
+   <!-- page numbers start -->
+    <div class="pageNumbersOuterWrapper">
+      <div class="pageNumbersWrapper"> 
+      
+       <%
+       page=Number(page)+1;
+       
+        for(var i = 1 ; i <= pageamount ; i++){
+       
+       
+       
+       %>
+       				<%if (page==i) {%>
+               <a href="/?page=<%=i-1%>" class="pageNumber currentPageNumber"><%=i%></a>
+               <%} else {%>
+               <a href="/?page=<%=i-1%>" class="pageNumber"><%=i%></a>
+               
+               <%}%>
+       <%}%>
+       
+   
+      <span class="pageNumber">...</span>
+      <a href="" class="pageNumber">&laquo;</a> 
+      <a href="" class="pageNumber">&raquo;</a> 
+      
+      </div>
+    </div>
+    <!-- page numbers end -->
+    
+    
+   <div class="footerDecoration"></div>
+    <!-- footer wrapper starts -->
+    <div class="footerWrapper"> <span class="copyright">&copy; copyright shopey.</span> <span class="footerLinksWrapper"><a href="" class="footerLink">Help</a><a href="" class="footerLink">Terms</a></span> </div>
+    <!-- footer wrapper ends --> 
+
+</div>
+<!-- website wrapper ends -->
+</body>
+</html>
+

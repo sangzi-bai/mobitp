@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>shopey | Mobile HTML/CSS eCommerce Template</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="shopey, premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+
+
+<% include header_css_js.ejs %>
+
+
+
+</head>
+<body> 
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  <!-- page wrapper starts -->
+  <div class="pageWrapper loginPageWrapper"> 
+   <% include headers.ejs %>
+    
+    
+    
+    <!-- page content wrapper starts -->
+    <div class="pageContentWrapper"> 
+      
+     <div class="headerBreak headerBreakTitleBottom"></div>
+      
+      <!-- page title starts -->
+      <ol class="breadcrumb">
+            <li><a href="javascript:history.back(-1)">返回上级目录</a></li>
+            
+        </ol>
+      <!-- page title ends -->
+      
+     
+     <div class="container">
+        <div class="row">
+            <% for(var i = 0 ; i < albums.length ; i++){ %>
+                <div class="col-xs-6 col-md-2">
+                    <a href="<%= wjj+"/"+albums[i] %>" class="thumbnail">
+                        <img src="/images/wjj.jpg" alt="...">
+                    </a>
+                    <h4><%= albums[i] %></h4>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+     
+     
+     
+     
+     
+      
+    </div>
+    <!-- page content wrapper ends -->
+    
+    <div class="footerDecoration"></div>
+    <!-- footer wrapper starts -->
+    <div class="footerWrapper"> <span class="copyright">&copy; copyright shopey.</span> <span class="footerLinksWrapper"><a href="" class="footerLink">Help</a><a href="" class="footerLink">Terms</a></span> </div>
+    <!-- footer wrapper ends -->
+    
+  </div>
+  <!-- page wrapper ends --> 
+</div>
+<!-- website wrapper ends -->
+
+
+
+</body>
+</html>
+

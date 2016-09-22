@@ -1,0 +1,24 @@
+﻿ <!-- main menu outer wrapper starts -->
+    <div class="mainMenuOuterWrapper"> 
+      <!-- main menu wrapper starts -->
+      <ul class="mainMenuWrapper">
+      <li><a href=""> 欢迎<%=username%>登录!</a></li>
+        <li <%if(active=="首页"){%> class="currentPage" <%}%>><a href="/">首页</a></li>
+    
+        <li <%if(active=="上传图片"){%> class="currentPage" <%}%>><a href="/setavatar">上传图片</a> </li>
+        <li <%if(active=="注册"){%> class="currentPage" <%}%>><a href="/regist">注册</a></li>
+        <li <%if(active=="登陆"){%> class="currentPage" <%}%>><a href="/login">登录</a></li>
+      </ul>
+      <!-- main menu wrapper ends -->
+      <div class="mainMenuBottomDecoration"></div>
+    </div>
+    <!-- main menu outer wrapper ends --> 
+        <div class="headerOuterWrapper">
+      <div class="headerWrapper"> <a href="/" class="accountButton"></a><a href="" class="mainMenuButton"></a></div>
+      <div class="headerDecoration"></div>
+      
+      <!-- main logo starts --> 
+      <a href="" class="mainLogo"><img src="/images/common/mainLogo.png" alt="" /></a> 
+      <!-- main logo ends --> 
+    </div>
+    <!-- header outer wrapper ends --> 
